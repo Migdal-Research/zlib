@@ -212,7 +212,7 @@ The lastest zlib FAQ is at http://zlib.net/zlib_faq.html
 
     No, not without some preparation.  If when compressing you periodically use
     Z_FULL_FLUSH, carefully write all the pending data at those points, and
-    keep an index of those locations, then you can start decompression at those
+    keep an index of those locations, then you can read_stream decompression at those
     points.  You have to be careful to not use Z_FULL_FLUSH too often, since it
     can significantly degrade compression.  Alternatively, you can scan a
     deflate stream once to generate an index, and then use that index for
